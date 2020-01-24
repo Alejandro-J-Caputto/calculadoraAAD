@@ -1,57 +1,83 @@
 
 
 
- function sumar(num1,num2){
+ function operacionSumar(num1,num2){
   
     let resultado = num1 + num2;        //suma
 
     return resultado;
   }
 
-  let suma = sumar(8,9);
+  
+    document.getElementById("Pantalla").value = suma;
 
-  alert(suma);
-
-  // document.getElementById("Pantalla").value = suma;
+  document.querySelector("#suma").addEventListener("click", suma)
+  function suma(){
+      memoria = document.getElementById("Pantalla").value
+      operacion = operacionSumar()
+      resetOperation()
+  }
   //-----------------------------------------------------------------------------------
 
-  function restar(num1, nume2) {
+  function operacionRestar(num1, nume2) {
 
     let resultado = num1 - nume2;     //resta
 
     return resultado;
       
   }
+  document.getElementById("Pantalla").value = resta;
 
-  let resta = restar (6,5);
+  document.querySelector("#resta").addEventListener("click", resta)
+  function resta(){
+      memoria = document.getElementById("Pantalla").value
+      operacion = operacionRestar()
+      resetOperation()
+  }
+  
 
-  alert(resta);
+  
 
 //-----------------------------------------------------------------------------------------------
 
-function multiplicar(num1, num2) {
+function opercionMultiplicar(num1, num2) {
 
     let resultado = num1 * num2;                  //multiplica
 
     return resultado;
 }
-   let multiplica = multiplicar (7,8)
+document.getElementById("Pantalla").value = multiplica;
 
-   alert(multiplica)
+document.querySelector("#multi").addEventListener("click", multiplica)
+function suma(){
+    memoria = document.getElementById("Pantalla").value
+    operacion = operacionMultiplicar()
+    resetOperation()
+}
+
+   
 
 //------------------------------------------------------------------------------------------------
 
 
-function dividir(num1 , num2) {
+function operacionDividir(num1, num2) {
 
     let resultado = num1 / num2;              //dividir
 
     return resultado;
 
 }
- let divide = dividir (12, 3)
+document.getElementById("Pantalla").value = division;
 
- alert(divide)
+  document.querySelector("#division").addEventListener("click", division)
+  function division(){
+      memoria = document.getElementById("Pantalla").value
+      operacion = operacionDividir()
+      resetOperation()
+  }
+ 
 
+//----------------------------------------------------------------------------------------
+ 
 
-
+ 
