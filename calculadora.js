@@ -75,3 +75,7 @@ function dolarAEuro(){
     result = document.getElementById("Pantalla").value * 0.91;
     document.getElementById("Pantalla").value = result;
 }
+
+function igual(){
+document.getElementById("Pantalla").value = operacion
+}
