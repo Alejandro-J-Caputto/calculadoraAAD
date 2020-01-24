@@ -1,6 +1,7 @@
 let memoria
 let valorBoton
 let pantalla
+let operacion
 document.querySelector("#cero").addEventListener("click", function() {
     numeros(document.getElementById("cero").value);
 });
@@ -48,4 +49,29 @@ document.querySelector("#coma").addEventListener("click", function() {
 function numeros(valor) {
     pantalla = valor
     document.getElementById("Pantalla").value += pantalla
+}
+
+
+document.querySelector("#porcentaje").addEventListener("click", porcentaje)
+function porcentaje(){
+    memoria = document.getElementById("Pantalla").value;
+    operacion = operacionPorcentaje();
+    resetOperation();
+}
+
+function operacionPorcentaje(numero1, numero2){
+    let result = numero1 / 100 * numero2;
+    return result;
+}
+
+document.querySelector("#euroADolar").addEventListener("click", euroADolar);
+function euroADolar(){
+    result = document.getElementById("Pantalla").value * 1.10;
+    document.getElementById("Pantalla").value = result;
+}
+
+document.querySelector("#dolarAEuro").addEventListener("click", dolarAEuro)
+function dolarAEuro(){
+    result = document.getElementById("Pantalla").value * 0.91;
+    document.getElementById("Pantalla").value = result;
 }
