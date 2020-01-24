@@ -9,7 +9,7 @@
   }
 
   
-    document.getElementById("Pantalla").value = suma;
+  
 
   document.querySelector("#suma").addEventListener("click", suma)
   function suma(){
@@ -49,7 +49,7 @@ function opercionMultiplicar(num1, num2) {
 document.getElementById("Pantalla").value = multiplica;
 
 document.querySelector("#multi").addEventListener("click", multiplica)
-function suma(){
+function multiplica(){
     memoria = document.getElementById("Pantalla").value
     operacion = operacionMultiplicar()
     resetOperation()
