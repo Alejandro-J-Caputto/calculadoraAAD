@@ -20,8 +20,8 @@ body{
   
   #Pantalla{
     background: white;
-    background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    font-size: 20px;
+    background:linear-gradient(141deg, #37397e 34%, #476d72 22%, #668f69 75%);
+    font-size: 25px;
     height: 100px;
     width:100%;
     border:0;
