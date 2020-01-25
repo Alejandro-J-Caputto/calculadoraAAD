@@ -80,10 +80,10 @@ function raiz (){
     return Math.sqrt(x)
 }
 // ALEATORIO CON PROMPT
-document.querySelector("Ran").addEventListener('click', Random)
+document.querySelector("#Ran").addEventListener('click', Random)
 function Random(){
-   var result = datoRan(a, b)
-    document.getElementById("Pantalla").value = result 
+   var result = datoRan()
+    document.getElementById("Pantalla").value = result
    
 
 }
@@ -93,11 +93,11 @@ function Randi (max, min){
 
  }
 function datoRan (){
-    var maxMin = []
+    var maxMin; 
     console.log(maxMin)
     var a = parseInt(prompt('Introduzca un maximo'))
      var b = parseInt(prompt('Introduzca un minimo'))
-     return maxMin.push(Randi(a,b))
+     return maxMin = (Randi(a,b))
 }
 
 // RESET RETOCADA 
