@@ -5,7 +5,7 @@ let status = 0
 
 //suma
 function operacionSumar(num1, num2) {
-    let resultado = parseInt(num1) + parseInt(num2);
+    let resultado = parseFloat(num1) + parseFloat(num2);
     return resultado;
 }
 document.querySelector("#suma").addEventListener("click", suma)
@@ -80,12 +80,12 @@ function Random() {
 
 function Randi(max, min) {
     return Math.floor(Math.random() * (max + 1 - min)) + min;
-    
+
 }
 function datoRan() {
     var maxMin;
-    var a = parseInt(prompt('Introduzca un maximo'))
-    var b = parseInt(prompt('Introduzca un minimo'))
+    var a = parseFloat(prompt('Introduzca un maximo'))
+    var b = parseFloat(prompt('Introduzca un minimo'))
     return maxMin = (Randi(a, b))
 }
 
@@ -151,9 +151,9 @@ document.querySelector("#coma").addEventListener("click", function () {
 
 function numeros(valor) {
     pantalla = valor
-    if(status != 0){
+    if (status != 0) {
         resetOperation()
-    status = 0
+        status = 0
     }
     document.getElementById("Pantalla").value += pantalla
 }
@@ -188,21 +188,23 @@ function dolarAEuro() {
 document.querySelector("#igual").addEventListener("click", igual)
 
 function igual() {
-    if (operacion === "suma") {
-        document.getElementById("Pantalla").value = operacionSumar(memoria, document.getElementById("Pantalla").value)
+    if (operacion != "") {
+        if (operacion === "suma") {
+            document.getElementById("Pantalla").value = operacionSumar(memoria, document.getElementById("Pantalla").value)
+        }
+        if (operacion === "resta") {
+            document.getElementById("Pantalla").value = operacionRestar(memoria, document.getElementById("Pantalla").value)
+        }
+        if (operacion === "multiplicacion") {
+            document.getElementById("Pantalla").value = operacionMultiplicar(memoria, document.getElementById("Pantalla").value)
+        }
+        if (operacion === "division") {
+            document.getElementById("Pantalla").value = operacionDividir(memoria, document.getElementById("Pantalla").value)
+        }
+        if (operacion === "porcentaje") {
+            document.getElementById("Pantalla").value = operacionPorcentaje(memoria, document.getElementById("Pantalla").value)
+        }
+        status = 1
     }
-    if (operacion === "resta") {
-        document.getElementById("Pantalla").value = operacionRestar(memoria, document.getElementById("Pantalla").value)
-    }
-    if (operacion === "multiplicacion") {
-        document.getElementById("Pantalla").value = operacionMultiplicar(memoria, document.getElementById("Pantalla").value)
-    }
-    if (operacion === "division") {
-        document.getElementById("Pantalla").value = operacionDividir(memoria, document.getElementById("Pantalla").value)
-    }
-    if (operacion === "porcentaje") {
-        document.getElementById("Pantalla").value = operacionPorcentaje(memoria, document.getElementById("Pantalla").value)
-    }
-    status = 1
+    operacion = ""
 }
-
